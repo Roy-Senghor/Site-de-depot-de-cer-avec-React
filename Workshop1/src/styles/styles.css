@@ -1,0 +1,244 @@
+/* ===================== */
+/* RESET & FOND GLOBAL   */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Avenir, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ===================== */
+/* NAVIGATION            */
+/* ===================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 16px;
+  gap: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff7f00;
+  border-bottom: 2px solid #ffbf66;
+}
+
+nav img {
+  height: 40px;
+  width: auto;
+}
+
+/* ===================== */
+/* BOUTONS               */
+/* ===================== */
+button {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e67300;
+}
+
+/* ===================== */
+/* BARRE DE RECHERCHE    */
+/* ===================== */
+.Barre-de-recherche {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 12px;
+  width: 80%;
+  max-width: 750px;
+  font-size: 16px;
+}
+
+/* ===================== */
+/* TITRES                */
+/* ===================== */
+h1, h2, h4 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: #555; }
+h4 { font-size: 1.2rem; color: #666; }
+
+/* ===================== */
+/* CONTAINER BOUTONS      */
+/* ===================== */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.Button-white {
+  background-color: #fff;
+  color: #ff7f00;
+  border: 2px solid #ff7f00;
+}
+
+.Button-white:hover {
+  background-color: #ff7f00;
+  color: #fff;
+}
+
+/* ===================== */
+/* CARTES CER             */
+/* ===================== */
+.prosit-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.prosit {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.prosit:hover {
+  transform: translateY(-5px);
+}
+
+.prosit img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.prosit h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px 0;
+  text-align: center;
+}
+
+.prosit p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.prosit button {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.prosit button:hover {
+  background-color: #e67300;
+}
+
+/* ===================== */
+/* FOOTER                */
+/* ===================== */
+footer {
+  background-color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #555;
+  margin-top: 30px;
+}
+
+.foot-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.foot-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.foot-column h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.foot-column a {
+  text-decoration: none;
+  color: #ff7f00;
+  display: block;
+  margin: 5px 0;
+}
+
+.foot-column a:hover {
+  text-decoration: underline;
+}
+
+/* ===================== */
+/* RESPONSIVE            */
+/* ===================== */
+@media (max-width: 600px) {
+  nav { flex-direction: column; }
+  nav ul { flex-direction: column; gap: 10px; }
+  input[type="text"] { width: 100%; }
+  .prosit-container { grid-template-columns: 1fr; }
+  .foot-container { flex-direction: column; align-items: center; }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  nav { flex-direction: column; }
+  input[type="text"] { width: 80%; }
+  .prosit-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 901px) {
+  .prosit-container { grid-template-columns: repeat(3, 1fr); }
+}
