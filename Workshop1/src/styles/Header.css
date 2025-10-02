@@ -1,0 +1,200 @@
+/* Header.css */
+.header {
+  background:#f5f5f5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Logo */
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Navigation */
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff7f00;
+  border-bottom: 2px solid#ff7f00;
+}
+
+/* Bouton de connexion */
+.auth-section {
+  flex-shrink: 0;
+}
+
+.connexion-btn {
+  background: #ff7f00;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.connexion-btn:hover {
+  background:  #ff7f00;
+}
+
+.connexion-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* Menu Burger - caché sur desktop */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30px;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background: #333;
+  transition: 0.3s;
+  transform-origin: center;
+}
+
+/* Animation du menu burger quand ouvert */
+.menu-toggle-open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle-open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===================== */
+/* RESPONSIVE DESIGN     */
+/* ===================== */
+
+/* Tablettes */
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    gap: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .nav-list-open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 1rem 2rem;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-link:hover {
+    background: #f8f8f8;
+    border-bottom: 2px solid transparent;
+  }
+
+  /* Afficher le menu burger */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .auth-section {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .connexion-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .connexion-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-link {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Grands écrans */
+@media (min-width: 769px) {
+  .nav-list {
+    flex: 1;
+    justify-content: center;
+    margin: 0 2rem;
+  }
+}

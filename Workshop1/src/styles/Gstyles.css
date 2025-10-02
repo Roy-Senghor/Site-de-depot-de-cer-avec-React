@@ -1,0 +1,78 @@
+/* GestionCer.css - Version ultra simple */
+
+.gestion-body {
+  background: #f5f5f5;
+  margin: 0;
+  font-family: Avenir, sans-serif;
+}
+
+.GestionDeCER {
+ 
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Header */
+.gestion-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gestion-nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.gestion-nav-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.gestion-nav-link:hover {
+  color: #800020;
+}
+
+/* Bouton */
+
+/* Contenu */
+.gestion-main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.gestion-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Table */
+.cer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cer-table th,
+.cer-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gestion-nav { flex-direction: column; text-align: center; }
+  .gestion-nav-list { justify-content: center; }
+}

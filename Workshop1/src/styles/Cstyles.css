@@ -1,0 +1,156 @@
+body {
+    background:linear-gradient(to bottom, orange, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.connexion-page {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.register-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.register-box {
+  flex: 1;
+  padding: 3rem;
+  background: white;
+}
+
+.register-box h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ff7f00;
+}
+
+.btn-connexion {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-connexion:hover {
+  background-color: #ff7f00;
+}
+
+.btn-connexion:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+}
+
+.login-link a {
+  color :#ff7f00;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.forgot-password a {
+  color: #666;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color:  #ff7f00;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.image-container {
+  flex: 1;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+  
+  .image-container {
+    order: -1;
+    padding: 1rem;
+  }
+  
+  .image-container img {
+    max-height: 200px;
+  }
+}

@@ -1,22 +1,53 @@
-import React from "react";
-
-
+import React, { useState } from "react";
+import Logo from "../assets/Logo.png";
+import { Link } from 'react-router-dom';
+import "../styles/Header.css"// Créons ce fichier CSS
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header>
-      <nav>
-        <div>
-          <img src="./assets/Logo.png" alt="Archiva Logo" />
+    <header className="header">
+      <nav className="nav">
+        {/* Logo */}
+        <div className="logo-container">
+          <Link to="/">
+            <img src={Logo} alt="Logo du site" className="logo" />
+          </Link>
         </div>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="TousLesCer.html">CERs</a></li>
-          <li><a href="Favoris.html">Mes CER favoris</a></li>
-          <li><a href="GestionDeCER.html">Gestion de CER</a></li>
+       
+        {/* Menu de navigation */}
+        <ul className={`nav-list ${isMenuOpen ? 'nav-list-open' : ''}`}>
+          <li className="nav-item">
+            <Link to="/" className="nav-link">Accueil</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/tous-les-cers" className="nav-link">CERs</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/favoris" className="nav-link">Mes CER favoris</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/gestion-de-cer" className="nav-link">Gestion de CER</Link>
+          </li>
         </ul>
-        <button className="connexion">
-          <a href="Connexion.html">Connexion</a>
+
+        {/* Bouton de connexion */}
+        <div className="auth-section">
+          <button className="connexion-btn">
+            <Link to="/connexion" className="connexion-link">Connexion</Link>
+          </button>
+        </div>
+
+        {/* Menu burger pour mobile */}
+        <button 
+          className={`menu-toggle ${isMenuOpen ? 'menu-toggle-open' : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </nav>
     </header>
